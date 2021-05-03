@@ -3,38 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="test.js"></script>
   </head>
   <body>
+    <!-- <form
+      name="iform"
+      action="/postTestRequest"
+      enctype="application/x-www-form-urlencoded"
+      method="post"
+    >
+      <input type="text" /><input type="text" />
+    </form>
+    <script language="Javascript">
+      var iform = document.forms["iform"];
+      setTimeout(function() {
+        iform.submit();
+      }, 300);
+    </script> -->
+
     <section>
-      <h3>Register</h3>
-      <div>
-        <label
-          style="display:inline-block; width: 100px;"
-          id="register-user-name-label"
-          htmlfor="register-user-name-input"
-          >register：</label
-        >
-        <input
-          style="display:inline-block; width: 200px;"
-          id="register-user-name-input"
-          type="text"
-        />
-      </div>
-      <div>
-        <label
-          style="display:inline-block; width: 100px;"
-          id="register-password-label"
-          htmlfor="register-password-input"
-          >pasword：</label
-        >
-        <input
-          style="display:inline-block; width: 200px;"
-          id="register-password-input"
-          type="text"
-        />
-      </div>
-      <button id="register" type="button">Register</button>
+      <h3>TestRequest</h3>
+      <button id="testRequest" type="button">Click</button>
     </section>
     <section>
       <h3>Login</h3>

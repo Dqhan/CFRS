@@ -7,10 +7,10 @@ window.onload = function() {
     return ret;
   }
 
-  var testRequestBtn = document.getElementById("testRequest");
+  var testRequestBtn = document.getElementById("hackRequest");
   testRequestBtn.addEventListener("click", function() {
     var xhr = new XMLHttpRequest();
-    var url = "./testRequest";
+    var url = "./hackRequest";
     var request = { test: "dqhan" };
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -26,28 +26,5 @@ window.onload = function() {
       }
     };
     xhr.send(assemble(request));
-  });
-  var loginBtn = document.getElementById("login");
-  loginBtn.addEventListener("click", function() {
-    var request = {};
-    request["username"] = document.getElementById("user-name-input").value;
-    request["password"] = document.getElementById("password-input").value;
-    fetch("./login", {
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        Accept: "application/json"
-      },
-      method: "POST",
-      body: assemble(request)
-    })
-      .then(function(res) {
-        return res.json();
-      })
-      .then(function(res) {
-        localStorage.setItem("token", res);
-      })
-      .catch(function(e) {
-        console.log(e);
-      });
   });
 };
